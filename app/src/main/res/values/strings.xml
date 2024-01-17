@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">aptmC</string>
+
+    <string-array name="root_listBox">
+        <item>Select root</item>
+        <item>C</item>
+        <item>C#/Db</item>
+        <item>D</item>
+        <item>D#/Eb</item>
+        <item>E</item>
+        <item>F</item>
+        <item>F#/Gb</item>
+        <item>G</item>
+        <item>G#/Ab</item>
+        <item>A</item>
+        <item>A#/Bb</item>
+        <item>B</item>
+    </string-array>
+
+    <string-array name="scaleType_listBox">
+        <item>Select scale type</item>
+        <item>ionian</item>
+        <item>dorian</item>
+        <item>phrygian</item>
+        <item>lydian</item>
+        <item>mixolydian</item>
+        <item>aeolian</item>
+        <item>locrian</item>
+        <item>harmonicminor</item>
+        <item>melodicminor</item>
+    </string-array>
+
+
 </resources>

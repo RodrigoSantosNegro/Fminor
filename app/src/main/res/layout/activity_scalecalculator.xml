@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_margin="10dp"
+        android:src="@drawable/back_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/calculatorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Scale Calculator"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/backButton"
+        app:layout_constraintRight_toLeftOf="@+id/favorite_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/favorite_button"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_margin="10dp"
+        android:src="@drawable/favorite_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/rootListBox"
+        android:layout_width="300sp"
+        android:layout_height="75sp"
+        android:layout_marginTop="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculatorTitle" />
+
+    <Spinner
+        android:id="@+id/scaleTypeListBox"
+        android:layout_width="300sp"
+        android:layout_height="75sp"
+        android:layout_marginTop="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rootListBox" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="150sp"
+        android:layout_height="75sp"
+        android:layout_marginBottom="20dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
