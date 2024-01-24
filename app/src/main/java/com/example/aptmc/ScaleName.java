@@ -22,7 +22,5 @@ public class ScaleName extends AppCompatActivity {
         TextView textViewScaleName = findViewById(R.id.textViewScaleName);
         textViewScaleName.setText(selectedRoot + " " + selectedScaleType);
 
-
-
     }
 }
