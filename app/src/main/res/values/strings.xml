@@ -19,15 +19,15 @@
 
     <string-array name="scaleType_listBox">
         <item>Select scale type</item>
-        <item>ionian</item>
-        <item>dorian</item>
-        <item>phrygian</item>
-        <item>lydian</item>
-        <item>mixolydian</item>
-        <item>aeolian</item>
-        <item>locrian</item>
-        <item>harmonicminor</item>
-        <item>melodicminor</item>
+        <item>Ionian/Major</item>
+        <item>Dorian</item>
+        <item>Phrygian</item>
+        <item>Lydian</item>
+        <item>Mixolydian</item>
+        <item>Aeolian/Minor</item>
+        <item>Locrian</item>
+        <item>Harmonic Minor</item>
+        <item>Melodic Minor</item>
     </string-array>
 
 
