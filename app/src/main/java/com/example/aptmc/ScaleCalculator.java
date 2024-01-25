@@ -41,7 +41,7 @@ public class ScaleCalculator extends AppCompatActivity{
                 String selectedRoot = rootListBox.getSelectedItem().toString();
                 String selectedScaleType = scaleTypeListBox.getSelectedItem().toString();
                 if(selectedScaleType.equals("Select scale type") || selectedRoot.equals("Select root")){
-                    Toast.makeText(ScaleCalculator.this, "You must select a Scale and the Root", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ScaleCalculator.this, "You must select the Root and a Scale", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(ScaleCalculator.this, "Calculating scale... Root: " + selectedRoot + ", Scale Type: " + selectedScaleType, Toast.LENGTH_SHORT).show();
                     // Send information to ScaleName
