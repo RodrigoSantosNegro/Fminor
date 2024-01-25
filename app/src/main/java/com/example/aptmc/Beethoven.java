@@ -155,7 +155,7 @@ public class Beethoven {
     }
 
 
-    String getChordName(String root, String third, String fifth) {
+    public String getChordName(String root, String third, String fifth) {
         int rootToThird = calculateInterval(root, third);
         int rootToFifth = calculateInterval(root, fifth);
 
