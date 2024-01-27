@@ -23,8 +23,9 @@
         android:id="@+id/scoreCounter"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Score"
+        android:text="Score: "
         android:textSize="18sp"
+        android:padding="16dp"
         app:layout_constraintStart_toEndOf="@id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/backButton" />
@@ -35,6 +36,7 @@
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
+        android:src="@drawable/note_g_1"
         app:layout_constraintTop_toBottomOf="@id/scoreCounter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -52,6 +54,7 @@
         <!-- Button 1 -->
         <Button
             android:id="@+id/btnC"
+            android:tag="C"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="C"
@@ -62,6 +65,7 @@
 
         <Button
             android:id="@+id/btnCSharp"
+            android:tag="C#"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="C#"
@@ -72,6 +76,7 @@
 
         <Button
             android:id="@+id/btnCFlat"
+            android:tag="Cb"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Cb"
@@ -82,6 +87,7 @@
 
         <Button
             android:id="@+id/btnD"
+            android:tag="D"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="D"
@@ -107,6 +113,7 @@
         <!-- Button 1 -->
         <Button
             android:id="@+id/btnDSharp"
+            android:tag="D#"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="D#"
@@ -117,6 +124,7 @@
 
         <Button
             android:id="@+id/btnDFlat"
+            android:tag="Db"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Db"
@@ -127,6 +135,7 @@
 
         <Button
             android:id="@+id/btnE"
+            android:tag="E"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="E"
@@ -137,6 +146,7 @@
 
         <Button
             android:id="@+id/btnEFlat"
+            android:tag="Eb"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Eb"
@@ -160,6 +170,7 @@
         <!-- Button 1 -->
         <Button
             android:id="@+id/btnF"
+            android:tag="F"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="F"
@@ -170,6 +181,7 @@
 
         <Button
             android:id="@+id/btnFSharp"
+            android:tag="F#"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="F#"
@@ -180,6 +192,7 @@
 
         <Button
             android:id="@+id/btnG"
+            android:tag="G"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="G"
@@ -190,6 +203,7 @@
 
         <Button
             android:id="@+id/btnGSharp"
+            android:tag="G#"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="G#"
@@ -213,6 +227,7 @@
         <!-- Button 1 -->
         <Button
             android:id="@+id/btnGFlat"
+            android:tag="Gb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gb"
@@ -223,6 +238,7 @@
 
         <Button
             android:id="@+id/btnA"
+            android:tag="A"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="A"
@@ -233,6 +249,7 @@
 
         <Button
             android:id="@+id/btnASharp"
+            android:tag="A#"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="A#"
@@ -243,6 +260,7 @@
 
         <Button
             android:id="@+id/btnAFlat"
+            android:tag="Ab"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Ab"
@@ -267,6 +285,7 @@
 
         <Button
             android:id="@+id/btnB"
+            android:tag="B"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
@@ -279,6 +298,7 @@
 
         <Button
             android:id="@+id/btnBFlat"
+            android:tag="Bb"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -294,11 +314,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

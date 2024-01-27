@@ -15,12 +15,22 @@
         <activity
             android:name=".ScaleCalculator"
             android:exported="true">
+
+        </activity>
+
+
+        <activity android:name=".NoteIdentification"
+            android:exported="true">
+            <!-- If this is the main activity that launches when the app starts -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <!-- This category is necessary for the launcher to find this activity -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".ScaleName"
             android:exported="true"/>
