@@ -19,16 +19,18 @@
         </activity>
 
 
-        <activity android:name=".NoteIdentification"
+        <activity android:name=".NoteIdentification"/>
+
+        <activity android:name=".ChordIdentification"
             android:exported="true">
-            <!-- If this is the main activity that launches when the app starts -->
+            <!-- If ChordIdentification is the main activity -->
+            <!-- Remove this intent-filter if it's not the main activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <!-- This category is necessary for the launcher to find this activity -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
 
         <activity

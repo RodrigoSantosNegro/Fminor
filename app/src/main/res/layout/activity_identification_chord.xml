@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_margin="10dp"
+        android:src="@drawable/back_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Score Counter -->
+    <TextView
+        android:id="@+id/scoreCounter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Score: "
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backButton" />
+
+    <!-- Sheet Display -->
+    <ImageView
+        android:id="@+id/sheetDisplay"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/note_g_1"
+        app:layout_constraintTop_toBottomOf="@id/scoreCounter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <Spinner
+        android:id="@+id/rootListBox"
+        android:layout_width="300sp"
+        android:layout_height="75sp"
+        android:layout_marginTop="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sheetDisplay" />
+
+    <Spinner
+        android:id="@+id/chordTypeListBox"
+        android:layout_width="300sp"
+        android:layout_height="75sp"
+        android:layout_marginTop="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rootListBox" />
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="150sp"
+        android:layout_height="75sp"
+        android:layout_marginBottom="20dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
