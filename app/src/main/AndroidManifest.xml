@@ -21,12 +21,14 @@
 
         <activity android:name=".NoteIdentification"/>
 
-        <activity android:name=".ChordIdentification"
+        <activity android:name=".ChordIdentification"/>
+
+        <activity android:name=".IntervalIdentification"
             android:exported="true">
-            <!-- If ChordIdentification is the main activity -->
-            <!-- Remove this intent-filter if it's not the main activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <!-- This category informs the system that this is the launch activity -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
