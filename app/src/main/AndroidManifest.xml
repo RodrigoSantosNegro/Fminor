@@ -12,18 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AptmC"
         tools:targetApi="31">
+        <!-- Cambia la actividad principal a InicioSesionActivity -->
         <activity
-            android:name=".ScaleCalculator"
+            android:name=".InicioSesionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Añade las otras actividades según las necesidades de tu aplicación -->
+        <activity
+            android:name=".ScaleCalculator"
+            android:exported="true"/>
         <activity
             android:name=".ScaleName"
             android:exported="true"/>
+        <activity
+            android:name=".SettingsApp" />
     </application>
 
 </manifest>
