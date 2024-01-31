@@ -42,276 +42,217 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/r1"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="92dp"
+        android:columnCount="4"
+        android:rowCount="4"
         app:layout_constraintTop_toBottomOf="@+id/sheetDisplay"
-        android:padding="16dp">
+        tools:layout_editor_absoluteX="16dp">
 
-        <!-- Button 1 -->
         <Button
             android:id="@+id/btnC"
-            android:tag="C"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="C"
             android:text="C"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnCSharp"
-            android:tag="C#"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="C#"
             android:text="C#"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnC"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnCFlat"
-            android:tag="Cb"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="Cb"
             android:text="Cb"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnCSharp"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnD"
-            android:tag="D"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="D"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnCFlat"
-            app:layout_constraintHorizontal_weight="1"/>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/r2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r1"
-        android:padding="16dp">
-
-        <!-- Button 1 -->
-        <Button
-            android:id="@+id/btnDSharp"
-            android:tag="D#"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="D"
+            android:text="D"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <Button
+            android:id="@+id/btnDSharp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="D#"
             android:text="D#"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnDFlat"
-            android:tag="Db"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="Db"
             android:text="Db"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnDSharp"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnE"
-            android:tag="E"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="E"
             android:text="E"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnDFlat"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnEFlat"
-            android:tag="Eb"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Eb"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnE"
-            app:layout_constraintHorizontal_weight="1"/>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/r3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r2"
-        android:padding="16dp">
-
-        <!-- Button 1 -->
-        <Button
-            android:id="@+id/btnF"
-            android:tag="F"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="Eb"
+            android:text="Eb"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <Button
+            android:id="@+id/btnF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="F"
             android:text="F"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnFSharp"
-            android:tag="F#"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="F#"
             android:text="F#"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnF"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnG"
-            android:tag="G"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="G"
             android:text="G"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnFSharp"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnGSharp"
-            android:tag="G#"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="G#"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnG"
-            app:layout_constraintHorizontal_weight="1"/>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/r4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r3"
-        android:padding="16dp">
-
-        <!-- Button 1 -->
-        <Button
-            android:id="@+id/btnGFlat"
-            android:tag="Gb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="G#"
+            android:text="G#"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <Button
+            android:id="@+id/btnGFlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="Gb"
             android:text="Gb"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnA"
-            android:tag="A"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="A"
             android:text="A"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnGFlat"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnASharp"
-            android:tag="A#"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="A#"
             android:text="A#"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnA"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnAFlat"
-            android:tag="Ab"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="Ab"
             android:text="Ab"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnASharp"
-            app:layout_constraintHorizontal_weight="1"/>
+            app:layout_constraintHorizontal_weight="1" />
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/r5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r4"
-        android:padding="16dp">
-
-        <!-- Button 1 -->
-
+        <TextView />
 
         <Button
             android:id="@+id/btnB"
-            android:tag="B"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="B"
             android:text="B"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintHorizontal_weight="1" />
 
         <Button
             android:id="@+id/btnBFlat"
-            android:tag="Bb"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="84dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:tag="Bb"
             android:text="Bb"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/btnB"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintHorizontal_weight="1" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </GridLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

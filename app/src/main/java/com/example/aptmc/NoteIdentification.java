@@ -67,7 +67,6 @@ public class NoteIdentification extends AppCompatActivity {
     private void initializeNoteImageMap() {
         // Initialize the map with note names and corresponding image drawable IDs
         noteImageMap = new HashMap<>();
-        noteImageMap = new HashMap<>();
         noteImageMap.put("A", R.drawable.note_a_1);
         noteImageMap.put("A#", R.drawable.note_asharp_1);
         noteImageMap.put("Ab", R.drawable.note_ab_1);
@@ -85,6 +84,17 @@ public class NoteIdentification extends AppCompatActivity {
         noteImageMap.put("Gb", R.drawable.note_gb_1);
         noteImageMap.put("G", R.drawable.note_g_1);
         noteImageMap.put("G#", R.drawable.note_gsharp_1);
+        noteImageMap.put("C", R.drawable.note_c_2);
+        noteImageMap.put("C#", R.drawable.note_csharp_2);
+        noteImageMap.put("Db", R.drawable.note_db_2);
+        noteImageMap.put("D", R.drawable.note_d_2);
+        noteImageMap.put("D#", R.drawable.note_dsharp_2);
+        noteImageMap.put("E", R.drawable.note_e_2);
+        noteImageMap.put("F", R.drawable.note_f_2);
+        noteImageMap.put("F#", R.drawable.note_fsharp_2);
+        noteImageMap.put("Gb", R.drawable.note_gb_2);
+        noteImageMap.put("G", R.drawable.note_g_2);
+        noteImageMap.put("G#", R.drawable.note_gsharp_2);
     }
 
     private void setUpNoteButtons() {
