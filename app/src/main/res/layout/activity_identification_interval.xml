@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Back Button -->
+
+    <!-- Score Counter -->
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="28dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreCounter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Score: "
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backButton" />
+
+    <!-- Sheet Display -->
+    <ImageView
+        android:id="@+id/sheetDisplay"
+        android:layout_width="273dp"
+        android:layout_height="90dp"
+        android:src="@drawable/note_g_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scoreCounter" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sheetDisplay"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="16dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/intervalsound_linlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sheetDisplay">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <Button
+                android:id="@+id/buttonMinorSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                
+                android:text="Minor 2nd"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/buttonMajorSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                
+                android:text="Major 2nd"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/buttonMinorThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                
+                android:text="Minor 3rd"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/buttonMajorThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                
+                android:text="Major 3rd"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </GridLayout>
+
+
+        <Button
+            android:id="@+id/buttonPerfectFourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            
+            android:text="Perfect Fourth"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/buttonTritone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            
+            android:text="Tritone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/buttonPerfectFifth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            
+            android:text="Perfect Fifth"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <Button
+                android:id="@+id/buttonMinorSixth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                
+                android:text="Minor 6th"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/buttonMajorSixth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                
+                android:text="Major 6th"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/buttonMinorSeventh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                
+                android:text="Minor 7th"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/buttonMajorSeventh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                
+                android:text="Major 7th"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/buttonOctave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            
+            android:text="Octave"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
