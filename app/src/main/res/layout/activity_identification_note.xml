@@ -12,7 +12,6 @@
         android:layout_width="28dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:src="@drawable/back_button"
         app:layout_constraintStart_toStartOf="parent"
         android:padding="16dp"
@@ -21,6 +20,7 @@
     <!-- Score Counter -->
     <TextView
         android:id="@+id/scoreCounter"
+        android:gravity="center"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Score: "
@@ -33,29 +33,31 @@
     <!-- Sheet Display -->
     <ImageView
         android:id="@+id/sheetDisplay"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_width="273dp"
+        android:layout_height="90dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/note_g_1"
-        app:layout_constraintTop_toBottomOf="@id/scoreCounter"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/scoreCounter" />
 
 
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="264dp"
+        android:layout_height="312dp"
+        android:layout_marginTop="16dp"
         android:columnCount="4"
         android:rowCount="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sheetDisplay"
-        tools:layout_editor_absoluteX="16dp">
+        tools:layout_editor_absoluteX="60dp">
 
         <Button
             android:id="@+id/btnC"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="C"
@@ -64,9 +66,9 @@
 
         <Button
             android:id="@+id/btnCSharp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="C#"
@@ -75,9 +77,9 @@
 
         <Button
             android:id="@+id/btnCFlat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="Cb"
@@ -86,9 +88,9 @@
 
         <Button
             android:id="@+id/btnD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="D"
@@ -97,9 +99,9 @@
 
         <Button
             android:id="@+id/btnDSharp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="D#"
@@ -108,9 +110,9 @@
 
         <Button
             android:id="@+id/btnDFlat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="Db"
@@ -119,9 +121,9 @@
 
         <Button
             android:id="@+id/btnE"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="E"
@@ -130,9 +132,9 @@
 
         <Button
             android:id="@+id/btnEFlat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="Eb"
@@ -141,9 +143,9 @@
 
         <Button
             android:id="@+id/btnF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="F"
@@ -152,9 +154,9 @@
 
         <Button
             android:id="@+id/btnFSharp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="F#"
@@ -163,9 +165,9 @@
 
         <Button
             android:id="@+id/btnG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="G"
@@ -174,9 +176,9 @@
 
         <Button
             android:id="@+id/btnGSharp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="G#"
@@ -185,9 +187,9 @@
 
         <Button
             android:id="@+id/btnGFlat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="Gb"
@@ -196,9 +198,9 @@
 
         <Button
             android:id="@+id/btnA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="A"
@@ -207,9 +209,9 @@
 
         <Button
             android:id="@+id/btnASharp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="A#"
@@ -218,9 +220,9 @@
 
         <Button
             android:id="@+id/btnAFlat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="Ab"
@@ -231,9 +233,9 @@
 
         <Button
             android:id="@+id/btnB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="B"
@@ -242,9 +244,9 @@
 
         <Button
             android:id="@+id/btnBFlat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:tag="Bb"

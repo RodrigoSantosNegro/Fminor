@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -23,10 +24,10 @@ public class ChordIdentification extends AppCompatActivity {
     private Spinner rootNoteSpinner, chordTypeSpinner;
     private String selectedRootNote, selectedChordType;
     private int currentScore = 0;
-    private Map<String, Integer> chordImageMap; // Maps chord names to drawable IDs
-    private String[] rootNotes; // Array of root notes
-    private String[] chordTypes; // Array of chord types
-    private List<String> chordKeys; // List to store chord keys
+    private Map<String, Integer> chordImageMap;
+    private String[] rootNotes;
+    private String[] chordTypes;
+    private List<String> chordKeys;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,15 @@ public class ChordIdentification extends AppCompatActivity {
         initializeSpinners();
         initializeChordImageMap();
         loadRandomChordImage();
+
+
+        ImageButton finishButton = findViewById(R.id.backButton);
+        finishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         confirmButton.setOnClickListener(this::onSubmitGuess);
     }

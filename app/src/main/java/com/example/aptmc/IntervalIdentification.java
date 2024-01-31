@@ -3,6 +3,7 @@ package com.example.aptmc;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +25,15 @@ public class IntervalIdentification extends AppCompatActivity {
         setContentView(R.layout.activity_identification_interval);
 
         sheetImageView = findViewById(R.id.sheetDisplay);
-        scoreTextView = findViewById(R.id.scoreCounter); // Make sure you have a TextView for the score
+        scoreTextView = findViewById(R.id.scoreCounter);
+
+        ImageButton finishButton = findViewById(R.id.backButton);
+        finishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         initializeIntervalImageMap();
         setUpIntervalButtons();

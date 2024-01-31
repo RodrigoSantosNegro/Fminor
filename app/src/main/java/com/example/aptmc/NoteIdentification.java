@@ -3,6 +3,7 @@ package com.example.aptmc;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,11 +27,21 @@ public class NoteIdentification extends AppCompatActivity {
         setContentView(R.layout.activity_identification_note);
 
         sheetImageView = findViewById(R.id.sheetDisplay);
-        scoreTextView = findViewById(R.id.scoreCounter); // Make sure you have a TextView for the score
+        scoreTextView = findViewById(R.id.scoreCounter);
+
+        ImageButton finishButton = findViewById(R.id.backButton);
+        finishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         initializeNoteImageMap();
         setUpNoteButtons();
         loadRandomSheet();
+
+
     }
 
     // Call this method to load a random sheet
@@ -39,7 +50,6 @@ public class NoteIdentification extends AppCompatActivity {
         List<String> notes = new ArrayList<>(noteImageMap.keySet());
         String randomNote = notes.get(new Random().nextInt(notes.size()));
 
-        // Update the ImageView with the random note's image
         sheetImageView.setImageResource(noteImageMap.get(randomNote));
 
         // Store the chosen note in the ImageView's tag for later reference
