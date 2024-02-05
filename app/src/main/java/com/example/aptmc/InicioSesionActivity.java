@@ -53,11 +53,11 @@ public class InicioSesionActivity extends AppCompatActivity {
         }
     }
 
-    private void iniciarSesion(FirebaseAuth mAuth) {
+    private void iniciarSesion() {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        System.out.println(mAuth.getCurrentUser());// Validaciones de los campos...
+        System.out.println(mAuth.getCurrentUser()); // Validaciones de los campos...
 
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "806636924803",
+    "firebase_url": "https://fminorapp-default-rtdb.firebaseio.com",
+    "project_id": "fminorapp",
+    "storage_bucket": "fminorapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806636924803:android:6319f7620e4706a98250b6",
+        "android_client_info": {
+          "package_name": "com.example.aptmc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKonDvF5v5veOfMfabPwEIGRJB1M1zIoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
