@@ -3,6 +3,7 @@ package com.example.aptmc;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ public class InicioSesionActivity extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword;
     private FirebaseAuth mAuth;
+    private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,7 @@ public class InicioSesionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         // Inicializar FirebaseApp
-        FirebaseApp.initializeApp(this);
+        FirebaseApp.initializeApp(context);
 
         // Inicializar FirebaseAuth después de inicializar FirebaseApp
         mAuth = FirebaseAuth.getInstance();
@@ -34,7 +36,12 @@ public class InicioSesionActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPasswordLogin);
 
         Button buttonLogin = findViewById(R.id.buttonLogin);
-        buttonLogin.setOnClickListener(v -> iniciarSesion());
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iniciarSesion(mAuth);
+            }
+        });
 
         // Agregar OnClickListener al botón de registro
         Button buttonRegister = findViewById(R.id.buttonRegister);
