@@ -29,6 +29,12 @@
             android:name=".ScaleName"
             android:exported="true"/>
         <activity
+            android:name=".RegistroActivity"
+            />
+        <activity
+            android:name=".MainTest"
+            android:exported="true"/>
+        <activity
             android:name=".SettingsApp" />
     </application>
 
