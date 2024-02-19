@@ -2,6 +2,7 @@ package com.example.aptmc;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,24 +29,11 @@ public class ProfileAdapter extends RecyclerView.Adapter <ProfileAdapter.Profile
     }
 
     public static class ProfileViewHolder extends RecyclerView.ViewHolder {
-        private TextView productName;
-        private ImageView iconProduct;
-        private ImageView deleteButton;
-        private TextView price;
+        private TextView profileScaleName;
 
-        public CartViewHolder(@NonNull View itemView) {
+        public ProfileViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            productName = itemView.findViewById(R.id.productNameTextView);
-            iconProduct = itemView.findViewById(R.id.iconProductImageView);
-            deleteButton = itemView.findViewById(R.id.deleteButtonImageView);
-            price = itemView.findViewById(R.id.priceTextView);
-        }
-
-        public void showData(Product product) {
-            this.productName.setText(product.getName());
-            this.price.setText(Float.toString(product.getPrice())+" €");
-            Util.downloadBitmapToImageView(product.getIcon_image_url(), this.iconProduct);
+            profileScaleName = itemView.findViewById(R.id.scaleNameProfile);
         }
 
     }
