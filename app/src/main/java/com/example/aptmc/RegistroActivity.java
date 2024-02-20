@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistroActivity extends AppCompatActivity {
 
-    private EditText editTextNombre, editTextEmail, editTextPassword;
+    private EditText editTextNombre, editTextEmail, editTextPassword, editTextPassword2;
     private FirebaseAuth mAuth;
 
     @Override
@@ -29,6 +29,7 @@ public class RegistroActivity extends AppCompatActivity {
         editTextNombre = findViewById(R.id.editTextNombre);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
+        editTextPassword2 = findViewById(R.id.editTextPassword2);
 
         Button buttonRegister = findViewById(R.id.buttonRegister);
         buttonRegister.setOnClickListener(v -> registrarUsuario());
@@ -38,6 +39,7 @@ public class RegistroActivity extends AppCompatActivity {
         String nombre = editTextNombre.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+        String password2 = editTextPassword2.getText().toString().trim();
 
         // Validaciones
         if (TextUtils.isEmpty(nombre)) {
@@ -52,6 +54,11 @@ public class RegistroActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(password) || password.length() < 6) {
             editTextPassword.setError("Ingresa una contraseña válida (mínimo 6 caracteres)");
+            return;
+        }
+
+        if (!password.equals(password2)) {
+            editTextPassword2.setError("Las contraseñas no coinciden");
             return;
         }
 
@@ -87,6 +94,14 @@ public class RegistroActivity extends AppCompatActivity {
         public Usuario(String nombre, String correo) {
             this.nombre = nombre;
             this.correo = correo;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public String getCorreo() {
+            return correo;
         }
     }
 }

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Profile extends AppCompatActivity {
+    RegistroActivity.Usuario usuario;
     private ImageButton profileBackButton;
     private ImageButton profileSettingsButton;
     private ImageView profileUserImageView;
@@ -31,9 +32,11 @@ public class Profile extends AppCompatActivity {
         profileSettingsButton.setBackground(null);
         profileUserImageView = findViewById(R.id.profileUserImageView);
         profileUserImageView.setBackground(null);
-        profileUserName = findViewById(R.id.profileUserName);
-        profileUserEmail = findViewById(R.id.profileUserEmail);
 
+        profileUserName = findViewById(R.id.profileUserName);
+        profileUserEmail.setText(usuario.getNombre());
+        profileUserEmail = findViewById(R.id.profileUserEmail);
+        profileUserEmail.setText(usuario.getCorreo());
 
     }
 }
