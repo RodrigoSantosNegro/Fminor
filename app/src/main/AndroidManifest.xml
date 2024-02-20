@@ -10,7 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
+        <activity android:name=".InicioSesionActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ScaleCalculator"
             android:exported="false" />
 
@@ -19,7 +25,10 @@
 
         <activity android:name=".ChordIdentification"
             android:exported="false" />
-
+        <activity android:name=".MainTest"
+            android:exported="false" />
+        <activity android:name=".RegistroActivity"
+            android:exported="false" />
         <!-- Corrected placement of the intent-filter -->
         <activity android:name=".IntervalIdentification"
         android:exported="false" />
