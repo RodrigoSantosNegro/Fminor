@@ -11,8 +11,9 @@
         android:layout_height="wrap_content"
         android:text="Tema "
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewSol"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLuna"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="163dp"
         tools:ignore="MissingConstraints" />
 
     <SeekBar
@@ -37,11 +38,12 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/themeSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/luna"
-        tools:ignore="DuplicateIds" />
+        tools:ignore="DuplicateIds"
+        tools:srcCompat="@drawable/luna" />
 
     <ImageView
         android:id="@+id/imageViewSol"
@@ -49,7 +51,8 @@
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/themeSwitch"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/sol" />
 
