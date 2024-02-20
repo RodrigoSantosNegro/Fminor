@@ -51,6 +51,16 @@ public class SettingsApp extends AppCompatActivity {
             }
             recreate();
         });
+        preferences.registerOnSharedPreferenceChangeListener((sharedPreferences, key) -> {
+            if (key.equals("themeMode")) {
+                applyTheme();
+                recreate();
+            }
+        });
+    }
+    private void applyTheme() {
+        int themeMode = preferences.getInt("themeMode", AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        AppCompatDelegate.setDefaultNightMode(themeMode);
     }
 
     private void configureVolumeSeekBar() {

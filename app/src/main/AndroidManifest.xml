@@ -15,21 +15,22 @@
 
         <activity android:name=".InicioSesionActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".ScaleCalculator"
-            android:exported="true">
+            android:exported="false" />
 
-        </activity>
         <activity android:name=".NoteIdentification"
             android:exported="false" />
 
         <activity android:name=".ChordIdentification"
+            android:exported="false" />
+
+        <activity android:name=".MainTest"
+            android:exported="false" />
+
+        <activity android:name=".RegistroActivity"
             android:exported="false" />
 
         <!-- Corrected placement of the intent-filter -->
@@ -41,7 +42,10 @@
 
         <activity android:name=".Profile"
             android:exported="true">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

@@ -26,8 +26,11 @@ public class Profile extends AppCompatActivity {
         this.recyclerView = findViewById(R.id.favScaleRecView);
         this.recyclerView.setLayoutManager( new LinearLayoutManager(this));
         profileBackButton = findViewById(R.id.profileBackButton);
+        profileBackButton.setBackground(null);
         profileSettingsButton = findViewById(R.id.profileSettingsButton);
+        profileSettingsButton.setBackground(null);
         profileUserImageView = findViewById(R.id.profileUserImageView);
+        profileUserImageView.setBackground(null);
         profileUserName = findViewById(R.id.profileUserName);
         profileUserEmail = findViewById(R.id.profileUserEmail);
 

@@ -39,7 +39,7 @@ public class InicioSesionActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iniciarSesion(mAuth);
+                iniciarSesion();
             }
         });
 
