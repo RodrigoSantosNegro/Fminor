@@ -16,8 +16,8 @@ import java.util.Arrays;
 
 public class ScaleName extends AppCompatActivity {
 
-    private Button backButton;
     private ImageButton favScaleButton;
+    private ImageButton backButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
