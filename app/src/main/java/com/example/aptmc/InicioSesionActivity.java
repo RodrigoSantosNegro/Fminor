@@ -76,7 +76,7 @@ public class InicioSesionActivity extends AppCompatActivity {
     }
 
     private void abrirPantallaPrincipal() {
-        Intent intent = new Intent(InicioSesionActivity.this, MainTest.class);
+        Intent intent = new Intent(InicioSesionActivity.this, MenuActivity.class);
         startActivity(intent);
         finish(); // Cierra la actividad actual
     }

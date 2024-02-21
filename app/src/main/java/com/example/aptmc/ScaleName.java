@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,12 +16,21 @@ import java.util.Arrays;
 
 public class ScaleName extends AppCompatActivity {
 
-    private Button backButton;
+    private ImageButton favScaleButton;
+    private ImageButton backButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scale_name);
+
+        favScaleButton = findViewById(R.id.favButton);
+        favScaleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ScaleName.this, "Si existiera base da datos se guardaría la escala en tus favoritos de perfil", Toast.LENGTH_LONG).show();
+            }
+        });
 
         backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -111,18 +122,19 @@ public class ScaleName extends AppCompatActivity {
 
 
     //Función que devuelve el string scaleType adaptado a las necesitades de Beethoven
-    private String transformScaleTypeNameForBeethoven(String originalName) {
+    private static String transformScaleTypeNameForBeethoven(String originalName) {
         switch (originalName) {
             case "Ionian/Major":
-                return "Ionian";
+                return "ionian";
             case "Aeolian/Minor":
-                return "Aeolian";
+                return "aeolian";
             case "Harmonic Minor":
-                return "Harmonic";
+                return "harmonicminor";
             case "Melodic Minor":
-                return "Melodic";
+                return "melodicminor";
             default:
                 return originalName;
         }
     }
+
 }
