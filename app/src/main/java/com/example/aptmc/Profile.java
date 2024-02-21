@@ -45,7 +45,7 @@ public class Profile extends AppCompatActivity {
         profileBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, MainTest.class);
+                Intent intent = new Intent(Profile.this, MenuActivity.class);
                 startActivity(intent);
             }
         });

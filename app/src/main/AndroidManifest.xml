@@ -41,9 +41,6 @@
         <activity android:name=".ChordIdentification"
             android:exported="false" />
 
-        <activity android:name=".MainTest"
-            android:exported="false" />
-
         <activity android:name=".RegistroActivity"
             android:exported="false" />
 
@@ -55,6 +52,9 @@
             android:exported="false" />
 
         <activity android:name=".SettingsApp"
+            android:exported="true" />
+
+        <activity android:name=".NoteSoundActivity"
             android:exported="true" />
 
 

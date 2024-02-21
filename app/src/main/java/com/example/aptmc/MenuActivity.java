@@ -6,9 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MenuActivity extends AppCompatActivity {
     private ImageButton profileButton;
@@ -18,13 +29,44 @@ public class MenuActivity extends AppCompatActivity {
     private Button menuIntervalIdentificationButton;
     private Button menuNoteSoundButton;
     private Button menuIntervalSoundButton;
+
     private Context context = this;
 
-
+    //private String username;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+
+        //ESTO DEbERÍA DE ESTAR FUNCIONANDO PERO NO LO HACE :D (necesita del String username de arriba)
+/*
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            String uid = currentUser.getUid();
+            DatabaseReference favRef = FirebaseDatabase.getInstance().getReference("usuarios").child(uid).child("username");
+            favRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()){
+                        username = snapshot.getValue(String.class);
+                        TextView usernameText = findViewById(R.id.menu_textview_username);
+                        usernameText.setText(username);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    username = "Errorrrr";
+                }
+
+            });
+        } else {
+            Toast.makeText(this, "El usuario debe de estar logeado!!", Toast.LENGTH_SHORT).show();
+        }
+ */
 
         profileButton = findViewById(R.id.menu_imgbutton_profile);
         profileButton.setOnClickListener(new View.OnClickListener() {
