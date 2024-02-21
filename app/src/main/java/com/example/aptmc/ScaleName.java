@@ -16,8 +16,12 @@ import java.util.Arrays;
 
 public class ScaleName extends AppCompatActivity {
 
+<<<<<<< Updated upstream
     private Button backButton;
     private ImageButton favScaleButton;
+=======
+    private ImageButton backButton;
+>>>>>>> Stashed changes
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
