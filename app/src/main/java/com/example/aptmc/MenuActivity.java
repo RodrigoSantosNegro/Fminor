@@ -30,7 +30,7 @@ public class MenuActivity extends AppCompatActivity {
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ScaleCalculator.class);
+                Intent intent = new Intent(context, Profile.class);
                 startActivity(intent);
             }
         });
@@ -52,35 +52,35 @@ public class MenuActivity extends AppCompatActivity {
         menuNoteidentificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ScaleCalculator.class);
+                Intent intent = new Intent(context, NoteIdentification.class);
                 startActivity(intent);
             }
         });
         menuChordIdentificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ScaleCalculator.class);
+                Intent intent = new Intent(context, ChordIdentification.class);
                 startActivity(intent);
             }
         });
         menuIntervalIdentificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ScaleCalculator.class);
+                Intent intent = new Intent(context, IntervalIdentification.class);
                 startActivity(intent);
             }
         });
         menuNoteSoundButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ScaleCalculator.class);
+                Intent intent = new Intent(context, NoteSoundActivity.class);
                 startActivity(intent);
             }
         });
         menuIntervalSoundButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ScaleCalculator.class);
+                Intent intent = new Intent(context, IntervalSoundActivity.class);
                 startActivity(intent);
             }
         });
