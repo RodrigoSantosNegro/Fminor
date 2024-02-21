@@ -30,5 +30,32 @@
         <item>Melodic Minor</item>
     </string-array>
 
+    <string name="interval_0">unison</string>
+    <string name="interval_1">minor 2nd</string>
+    <string name="interval_2">major 2nd</string>
+    <string name="interval_3">minor 3rd</string>
+    <string name="interval_4">major 3rd</string>
+    <string name="interval_5">perfect 4th</string>
+    <string name="interval_6">diminished 5th</string>
+    <string name="interval_7">perfect 5th</string>
+    <string name="interval_8">minor 6th</string>
+    <string name="interval_9">major 6th</string>
+    <string name="interval_10">minor 7th</string>
+    <string name="interval_11">major 7th</string>
+    <string name="interval_12">octave</string>
+
+    <string name="note_0">C</string>
+    <string name="note_1">C sharp/D flat</string>
+    <string name="note_2">D</string>
+    <string name="note_3">D sharp/E flat</string>
+    <string name="note_4">E</string>
+    <string name="note_5">F</string>
+    <string name="note_6">F sharp/G flat</string>
+    <string name="note_7">G</string>
+    <string name="note_8">G sharp/A flat</string>
+    <string name="note_9">A</string>
+    <string name="note_10">A sharp/B flat</string>
+    <string name="note_11">B</string>
+
 
 </resources>
