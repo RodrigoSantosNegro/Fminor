@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/notesound_upperframe"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent">
+       <ImageButton
+        android:id="@+id/notesound_button_back"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:layout_margin="10dp"
+        android:src="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Score Counter -->
+    <TextView
+        android:id="@+id/notesound_textview_scoretag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: "
+        android:textStyle="italic"
+        android:textSize="26sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintLeft_toRightOf="@id/notesound_button_back"
+        app:layout_constraintTop_toTopOf="parent" />
+       <TextView
+           android:id="@+id/notesound_textview_scorenumber"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="0"
+           android:textSize="26sp"
+           android:textStyle="bold"
+           android:layout_margin="10dp"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintLeft_toRightOf="@id/notesound_textview_scoretag"/>
+
+       <ImageButton
+           android:id="@+id/notesound_imgbutton_playpause"
+           android:src="@drawable/play_button"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/notesound_textview_scoretag"
+           android:layout_marginTop="30dp"
+           android:layout_marginBottom="30dp"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/notesound_upperframe">
+    <GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginTop="30dp"
+
+    android:rowCount="6"
+    android:columnCount="3">
+    <Button
+        android:id="@+id/notesound_button_C"
+        android:tag="C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="C"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Csharp"
+        android:tag="C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="C#"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Cflat"
+        android:tag="C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="Cb"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_D"
+        android:tag="D"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="D"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Dsharp"
+        android:tag="D"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="D#"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Dflat"
+        android:tag="D"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="Db"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_E"
+        android:tag="C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="E"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Eflat"
+        android:tag="Eb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="Eb"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_F"
+        android:tag="F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="F"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Fsharp"
+        android:tag="C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="F#"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_G"
+        android:tag="G"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="G"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Gsharp"
+        android:tag="G"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="G#"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Gflat"
+        android:tag="C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="Gb"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_A"
+        android:tag="A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="A"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Asharp"
+        android:tag="A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="A#"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Aflat"
+        android:tag="A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="Ab"
+        app:layout_constraintHorizontal_weight="1" />
+    <TextView/>
+    <Button
+        android:id="@+id/notesound_button_B"
+        android:tag="B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="B"
+        app:layout_constraintHorizontal_weight="1" />
+    <Button
+        android:id="@+id/notesound_button_Bflat"
+        android:tag="B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginVertical="10dp"
+        android:text="Bb"
+        app:layout_constraintHorizontal_weight="1" />
+
+
+
+</GridLayout>
+
+</ScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
