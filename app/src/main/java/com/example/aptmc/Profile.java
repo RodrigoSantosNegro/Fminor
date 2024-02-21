@@ -81,6 +81,7 @@ public class Profile extends AppCompatActivity {
                 mAuth.signOut();
                 Toast.makeText(Profile.this, "Log out succesfull", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Profile.this, InicioSesionActivity.class);
+                startActivity(intent);
             }
         });
 
