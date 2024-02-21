@@ -1,4 +1,6 @@
 package com.example.aptmc;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -102,7 +105,7 @@ public class SettingsApp extends AppCompatActivity {
     private void configureBackButton() {
         Button btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> {
-            Intent intent = new Intent(SettingsApp.this, InicioSesionActivity.class);
+            Intent intent = new Intent(SettingsApp.this, Profile.class);
             startActivity(intent);
         });
     }
@@ -110,26 +113,52 @@ public class SettingsApp extends AppCompatActivity {
     private void configureDeleteUserButton() {
         Button btnDeleteUser = findViewById(R.id.btnDeleteUser);
         btnDeleteUser.setOnClickListener(v -> {
-            // Obtener el usuario actualmente autenticado
-            FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+            // Mostrar un cuadro de diálogo de confirmación
+            showConfirmationDialog();
+        });
+    }
 
-            // Verificar si el usuario está autenticado
-            if (currentUser != null) {
-                // Eliminar el usuario actual
-                currentUser.delete()
-                        .addOnCompleteListener(task -> {
-                            if (task.isSuccessful()) {
-                                // El usuario se eliminó exitosamente
-                                Toast.makeText(SettingsApp.this, "Usuario eliminado exitosamente", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(SettingsApp.this, InicioSesionActivity.class);
-                                finish(); // Cerrar la actividad después de eliminar el usuario
-                                startActivity(intent);
-                            } else {
-                                // Error al eliminar el usuario
-                                Toast.makeText(SettingsApp.this, "Error al eliminar el usuario", Toast.LENGTH_SHORT).show();
-                            }
-                        });
+    private void showConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Confirmar eliminación");
+        builder.setMessage("¿Estás seguro de que quieres eliminar tu cuenta? Esta acción no se puede deshacer.");
+
+        // Agregar el botón (Sí)
+        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Enviar un enlace de verificación por correo electrónico al usuario
+                sendVerificationEmail();
+
+                // Mostrar un mensaje al usuario indicando que se ha enviado un enlace de verificación
+                Toast.makeText(SettingsApp.this, "Se ha enviado un enlace de verificación por correo electrónico. Verifica tu correo antes de eliminar tu cuenta.", Toast.LENGTH_SHORT).show();
             }
         });
+
+        // Agregar el botón (No)
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        // Mostrar el cuadro de diálogo
+        builder.show();
+    }
+
+    private void sendVerificationEmail() {
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        if (currentUser != null) {
+            currentUser.sendEmailVerification()
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            // Éxito al enviar el correo de verificación
+                        } else {
+                            // Error al enviar el correo de verificación
+                            Toast.makeText(SettingsApp.this, "Error al enviar el correo de verificación", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }
     }
 }
