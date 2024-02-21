@@ -125,13 +125,13 @@ public class ScaleName extends AppCompatActivity {
     private static String transformScaleTypeNameForBeethoven(String originalName) {
         switch (originalName) {
             case "Ionian/Major":
-                return "Ionian";
+                return "ionian";
             case "Aeolian/Minor":
-                return "Aeolian";
+                return "aeolian";
             case "Harmonic Minor":
-                return "Harmonic";
+                return "harmonicminor";
             case "Melodic Minor":
-                return "Melodic";
+                return "melodicminor";
             default:
                 return originalName;
         }
