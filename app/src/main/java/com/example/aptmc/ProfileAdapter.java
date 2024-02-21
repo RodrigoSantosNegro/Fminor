@@ -1,5 +1,6 @@
 package com.example.aptmc;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,27 @@ public class ProfileAdapter extends RecyclerView.Adapter <ProfileAdapter.Profile
     public void onBindViewHolder(@NonNull ProfileAdapter.ProfileViewHolder holder, int position) {
         String scaleName = scaleNames.get(position);
         holder.profileScaleName.setText(scaleName);
+
+        holder.profileScaleName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[] parts = scaleName.split(" ", 2);
+                String selectedRoot = parts[0];
+                String selectedScaleType = parts[1];
+                if(selectedScaleType.contains(" ")){
+                    String[] selectedScaleTypeParts = selectedScaleType.split(" ");
+                    String tmp1 = selectedScaleTypeParts[0];
+                    String tmp2 = selectedScaleTypeParts[1];
+                    selectedScaleType = (tmp1+tmp2).toLowerCase();
+                }
+
+
+                Intent intent = new Intent(v.getContext(), ScaleName.class);
+                intent.putExtra("ROOT_SELECTION", selectedRoot);
+                intent.putExtra("SCALE_TYPE_SELECTION", selectedScaleType);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
 
@@ -52,4 +74,6 @@ public class ProfileAdapter extends RecyclerView.Adapter <ProfileAdapter.Profile
         }
 
     }
+
+
 }

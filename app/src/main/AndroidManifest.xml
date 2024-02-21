@@ -15,6 +15,14 @@
 
         <activity android:name=".InicioSesionActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Profile"
+            android:exported="true">
 
         </activity>
 
@@ -40,13 +48,10 @@
         <activity android:name=".ScaleName"
             android:exported="false" />
 
-        <activity android:name=".Profile"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".SettingsApp"
+            android:exported="true" />
+
+
     </application>
 
 </manifest>

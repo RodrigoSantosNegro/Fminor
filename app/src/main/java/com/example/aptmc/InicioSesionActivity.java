@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class InicioSesionActivity extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword;
-    private FirebaseAuth mAuth;
+    private static FirebaseAuth mAuth;
     private Context context = this;
 
     @Override
@@ -83,8 +83,25 @@ public class InicioSesionActivity extends AppCompatActivity {
     }
 
     private void abrirPantallaPrincipal() {
-        Intent intent = new Intent(InicioSesionActivity.this, MainTest.class);
+        Intent intent = new Intent(InicioSesionActivity.this, Profile.class);
         startActivity(intent);
         finish(); // Cierra la actividad actual
+    }
+
+    public static class Usuario {
+        public String nombre, correo;
+
+        public Usuario(String correo) {
+            this.nombre = String.valueOf(mAuth.getCurrentUser());;
+            this.correo = correo;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public String getCorreo() {
+            return correo;
+        }
     }
 }
